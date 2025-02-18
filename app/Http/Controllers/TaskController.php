@@ -35,7 +35,7 @@ class TaskController extends Controller
     public function edit($id)
     {
         $task = Task::where('id', $id)->where('user_id', Auth::id())->firstOrFail();
-        return view('edit_task', compact('task'));
+        return view('edit_tasks', compact('task'));
     }
 
     public function update(Request $request, $id)

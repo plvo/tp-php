@@ -24,7 +24,7 @@
             <li>
                 {{ $task->title }} - {{ $task->status }}
                 <a href="/tasks/edit/{{ $task->id }}">Modifier</a>
-                <form action="/tasks/delete/{{ $task->id }}" method="POST" style="display:inline;">
+                <form action="/tasks/delete{{ $task->id }}" method="POST" style="display:inline;">
                     @csrf
                     <button type="submit">Supprimer</button>
                 </form>
